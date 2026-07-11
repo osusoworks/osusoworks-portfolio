@@ -40,6 +40,13 @@
       font-size: 17px;
     }
 
+    .motto {
+      margin: 0 0 12px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
     .intro {
       background: #fff;
       padding: 24px;
@@ -59,6 +66,25 @@
       margin-bottom: 18px;
     }
 
+    .project-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+    }
+
+    .project-art {
+      width: 112px;
+      height: 112px;
+      flex: 0 0 112px;
+      border-radius: 18px;
+      object-fit: cover;
+    }
+
+    .project-body {
+      min-width: 0;
+      flex: 1;
+    }
+
     .project h3 {
       margin: 0 0 8px;
       font-size: 20px;
@@ -66,12 +92,44 @@
 
     .tag {
       display: inline-block;
-      margin-top: 10px;
+      margin: 10px 5px 0 0;
       padding: 4px 10px;
       background: #ececec;
       border-radius: 999px;
       font-size: 13px;
       color: #555;
+    }
+
+    .status {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 14px;
+      border: 1px solid #b3262d;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .dram-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 30%, #5b351e 0%, #21140e 55%, #110c09 100%);
+      color: #e8c98a;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: center;
     }
 
     footer {
@@ -83,6 +141,27 @@
     a {
       color: #b3262d;
     }
+
+    @media (max-width: 560px) {
+      .container {
+        padding-top: 32px;
+      }
+
+      .project-main {
+        gap: 16px;
+      }
+
+      .project-art {
+        width: 82px;
+        height: 82px;
+        flex-basis: 82px;
+        border-radius: 14px;
+      }
+
+      .dram-art {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
@@ -93,56 +172,101 @@
       <div class="brand">OSUSOWORKS</div>
       <h1>大谷 岳史</h1>
       <div class="subtitle">
-        個人開発 / AIアプリ開発
+        個人制作レーベル
       </div>
     </header>
 
     <section class="intro">
-      暮らしや趣味の中にある小さな困りごとを、
-      AIとアプリで解決するプロダクトを制作しています。
-      現在は、生活支援・社会課題・趣味領域を中心に、
-      複数のアプリやサービスを試作しています。
+      <p class="motto">私の欲しいを、欲しいあなたへお裾分け。</p>
+      OSUSOWORKSは、個人で思いついたアイデアや
+      「こんなのあったらいいな」と思ったものを形にする個人制作レーベルです。
+      アプリ、Webサービス、ゲーム、プロダクトなど、
+      ジャンルにこだわらず制作しています。
     </section>
 
     <h2>Projects</h2>
 
     <section class="project">
-      <h3>ごみ出し・片付け支援アプリ</h3>
-      <p>
-        写真から不用品を判定し、
-        ごみ分別、粗大ごみ、リユース候補、
-        片付けの手順を整理する生活支援アプリです。
-      </p>
-      <span class="tag">社会課題</span>
+      <div class="project-main">
+        <svg class="project-art" viewBox="0 0 512 512" role="img" aria-labelledby="gomidashi-icon-title gomidashi-icon-desc">
+          <title id="gomidashi-icon-title">ごみ袋のアイコン</title>
+          <desc id="gomidashi-icon-desc">笑顔が描かれた黒一色のごみ袋</desc>
+          <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke-width="20" d="M214 80c4 19 20 35 42 35s38-16 42-35M226 79h60M207 116c-58 28-94 89-106 168-8 54 7 103 44 131 29 22 67 30 111 30s82-8 111-30c37-28 52-77 44-131-12-79-48-140-106-168"/>
+            <path stroke-width="16" d="M207 116c28 13 70 13 98 0"/>
+            <path stroke-width="18" d="M182 257c15-15 31-15 46 0M284 257c15-15 31-15 46 0M208 310c13 22 29 32 48 32s35-10 48-32"/>
+          </g>
+        </svg>
+        <div class="project-body">
+          <h3>ごみ出しその日（仮）</h3>
+          <span class="status">開発中</span>
+          <p>
+            ごみ出しや片付けで生まれる「これは何ごみ？」「どう処分すればいい？」
+            という困りごとを減らすための生活支援アプリです。
+            写真から不用品を判定し、分別・処分方法・リユース候補などを整理します。
+          </p>
+          <span class="tag">生活支援</span>
+          <span class="tag">社会課題</span>
+        </div>
+      </div>
     </section>
 
     <section class="project">
-      <h3>今日からわたしは障がい者</h3>
-      <p>
-        障害の診断後に必要となる制度や支援先へ、
-        当事者が迷わずたどり着けるようにする
-        情報ポータルサイトの構想です。
-      </p>
-      <span class="tag">福祉・情報支援</span>
+      <div class="project-main">
+        <div class="project-art dram-art" aria-hidden="true">Dram<br>Match</div>
+        <div class="project-body">
+          <h3>Dram Match</h3>
+          <span class="status">試作版公開中</span>
+          <p>
+            ウイスキーの香りや味わいの好みから、
+            自分に合いそうな銘柄を探すためのマッチングサービスです。
+          </p>
+          <a class="button" href="https://whisky-daisky.vercel.app/" target="_blank" rel="noopener noreferrer">Dram Matchを開く</a><br>
+          <span class="tag">趣味</span>
+          <span class="tag">マッチング</span>
+        </div>
+      </div>
     </section>
 
     <section class="project">
-      <h3>ウイスキーマッチング</h3>
-      <p>
-        香りや味わいの好みから、
-        自分に合うウイスキーを探しやすくする
-        嗜好マッチングアプリです。
-      </p>
-      <span class="tag">趣味・嗜好</span>
+      <div class="project-main">
+        <img class="project-art" src="https://play-lh.googleusercontent.com/5VfEPIpdfzyT3UVXYBhzK-DGtFtJPBGVVAd16FT9V6RPXXT2EvP0MDNDIGmei7P-uKpvvAHOaEpMtj_e9FeNqsk=w512-h512" alt="World of Flipsのアプリアイコン">
+        <div class="project-body">
+          <h3>World of Flips (WOF)</h3>
+          <span class="status">Google Play公開中</span>
+          <p>
+            折りたたみスマートフォンを持っていなくても、
+            あたかも所有しているような体験ができたら面白いと思い制作したAndroidアプリです。
+            画面上に折り目を表示できるほか、アンロック要素も楽しめます。
+          </p>
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.worldofflips.app&amp;hl=ja&amp;pli=1" target="_blank" rel="noopener noreferrer">Google Playで見る</a><br>
+          <span class="tag">Android App</span>
+        </div>
+      </div>
     </section>
 
-    <h2>About</h2>
+    <h2>構想中</h2>
+
+    <section class="project">
+      <h3>今日から私は障がい者</h3>
+      <span class="status">構想中</span>
+      <p>
+        自身も発達障害の診断を受けた経験から生まれた、
+        障害を抱えることになった人のための情報ポータルサイト構想です。
+        制度や支援があっても、必要な情報へたどり着くこと自体が難しいことがあります。
+        「何から調べればいいかわからない」という状態から、
+        必要な制度や支援へつながるための入口を目指しています。
+      </p>
+      <span class="tag">福祉</span>
+      <span class="tag">情報支援</span>
+    </section>
+
+    <h2>Profile</h2>
 
     <section class="intro">
-      腕時計販売などの接客経験を活かしながら、
-      AIを使った個人開発に取り組んでいます。
-      技術だけでなく、実際に使う人の困りごとや
-      生活導線を意識したプロダクトづくりを目指しています。
+      時計販売・接客業を経て、個人制作活動を開始。
+      AIなどのツールを活用しながら、
+      自分が欲しいと思ったもの、誰かの役に立つかもしれないものを形にしています。
     </section>
 
     <footer>
