@@ -2,7 +2,7 @@
 
 ## 目的
 
-OSUSOWORKSの個人制作を紹介するGitHub Pagesのポートフォリオ。
+OSUSOWORKSの個人制作を紹介していたポートフォリオのソース。
 
 ## 現在の掲載
 
@@ -10,7 +10,8 @@ OSUSOWORKSの個人制作を紹介するGitHub Pagesのポートフォリオ。
 - World of Flips (WOF)
 - ごみ出しその日（仮）
 
-## 公開先と更新方法
+## 公開状態
 
-- 公開URL: https://osusoworks.github.io/osusoworks-portfolio/
-- `main` ブランチの `index.html` を更新するとGitHub Pagesへ反映される。
+- GitHub Pagesは2026-09-30に停止済み。以前の公開URLは404を返す。
+- リポジトリと `main` ブランチのソースは保持している。
+- 再公開は、ユーザーから明示的な依頼があった場合にGitHub Pagesを再設定して行う。
